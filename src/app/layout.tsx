@@ -27,8 +27,10 @@ export const metadata: Metadata = {
   title: "Compressify — Compress Images Online",
   description:
     "Reduce image file size without sacrificing quality. Fast, free, and completely private — compression happens right in your browser.",
+  verification: {
+    google: "x7oQH3WSL0SGRYynKx4jh9AVevuOEO81LQSPY-XDUKc",
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
