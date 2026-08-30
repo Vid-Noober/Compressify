@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -32,17 +33,6 @@ export const metadata: Metadata = {
   description:
     "Compress JPG, PNG, and WebP images online for free. Reduce image file size while keeping great quality. Fast, secure, and private — your images never leave your browser.",
 
-  keywords: [
-    "image compressor",
-    "compress image online",
-    "free image compressor",
-    "compress JPG",
-    "compress PNG",
-    "compress WebP",
-    "reduce image size",
-    "image size reducer",
-  ],
-
   verification: {
     google: "x7oQH3WSL0SGRYynKx4jh9AVevuOEO81LQSPY-XDUKc",
   },
@@ -51,14 +41,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-
-  authors: [
-    {
-      name: "Compressify",
-    },
-  ],
-
-  creator: "Compressify",
 
   openGraph: {
     type: "website",
@@ -87,7 +69,15 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4641509475233236"
+          crossOrigin="anonymous"
+        />
+      </body>
     </html>
   );
 }
